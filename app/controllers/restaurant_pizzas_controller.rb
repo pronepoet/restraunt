@@ -11,7 +11,7 @@ def restaurant_pizza_params
 end
 
     def unprocessable_entity_method(e)
-        render json: {errors: e.record.errors}, status: :unprocessable_entity
+        render json: {errors: e.record.errors.full_messages}, status: :unprocessable_entity
     end
     
 end
